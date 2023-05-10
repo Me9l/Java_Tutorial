@@ -1,6 +1,8 @@
 package chapter04.ex05;
 
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class EX01 {
 	public static void main(String[] args) {
@@ -28,13 +30,18 @@ public class EX01 {
 			} else if (input == 2) {
 				System.out.print("2번 선택 > 10 이하의 정수를 입력하세요. ");
 				input = sc.nextInt();
-				if (input <= 10) {
-					System.out.printf(">>> %d 입력. 입력값 만큼 JAVA를 출력합니다.\n", input);
-					for (int i = 1; i <= input; i++) {
-						System.out.println("[" + i + "] JAVA");
-					}
-					System.out.println();
-				} else System.out.println("잘못된 입력.");
+				System.out.println(input <= 10 ? 
+					    (String.format(">>> %d 입력. 입력값 만큼 JAVA를 출력합니다.\n", input) + 
+					    IntStream.rangeClosed(1, input).mapToObj(i -> "[" + i + "] JAVA").collect(Collectors.joining("\n")) + 
+					    "\n") : 
+					    "잘못된 입력.");
+//				if (input <= 10) {
+//					System.out.printf(">>> %d 입력. 입력값 만큼 JAVA를 출력합니다.\n", input);
+//					for (int i = 1; i <= input; i++) {
+//						System.out.println("[" + i + "] JAVA");
+//					}
+//					System.out.println();
+//				} else System.out.println("잘못된 입력.");
 			} else if (input == 3) {
 				System.out.println("3번 선택 > 10개의 정수를 입력 받아 짝수의 갯수를 구합니다.");
 				int count = 0;
