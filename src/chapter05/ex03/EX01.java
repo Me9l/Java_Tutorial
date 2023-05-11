@@ -117,14 +117,32 @@ public class EX01 {
 //					}
 //				}
 				
+				int b = 0 ; // 인덱스번호
 				int a ; // 들어갈 값
-				int b ; // 인덱스번호
 				////////////////////////////
 				//여기부터 시작
 				
-				for (int j = 0; j < arr.length; j++) {
-					System.out.println(arr[j]);
+				for (a = 1; ; a++) {
+					if ( a % 3 == 0 ) {
+						if ( a % 6 != 0) {
+							arr[b] = a;
+							b++;
+						}
+					}
+					if(b == sizeOfArr) break;
 				}
+				// for
+				for (int j = 0; j < arr.length; j++) {
+					System.out.print(arr[j]+" ");
+				}
+				System.out.println();
+				//Enhanced for
+				for (int j : arr) {
+					System.out.print(j + " ");
+				}
+				System.out.println();
+				// Arrays.toString()
+				System.out.println("Arrays.toString : " + Arrays.toString(arr));
 			
 			} else if (select == 4) {
 				System.out.println("프로그램 종료.");
