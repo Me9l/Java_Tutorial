@@ -59,9 +59,11 @@ public class Object04 {
 		car3.print();
 		
 		
-		Car[] arr = new Car[3];
-		arr[0] = car1 ;
-		arr[1] = car1 ;
-		arr[2] = car1 ;
+//		Car[] arr = new Car[3];
+//		arr[0] = car1 ;
+//		arr[1] = car2 ;
+//		arr[2] = car3 ;		
+		Car[] arr = new Car[] {car1, car2, car3};
+		
 	}
 }
