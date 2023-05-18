@@ -39,7 +39,7 @@ public class Method05 {
 	public static void main(String[] args) {
 		/*
 		method overloading : 동일한 이름의 method, 시그니처에 따라 다른 메소드를 식별.
-			- 시그니처 : 식별자. input args의 수, input args의 자료형에 따라 구별.
+			- 시그니처 : 식별자. input args의 수, input args의 자료형에 따라 구별. (return type 은 시그니처가 될 수 없다.)
 			- overload 시 intput param의 수, 자료형이 동일한 method를 만들면 에러발생.
 				- print(int a, int b) <= error , print(int a , double b) <== ok.
 				
