@@ -29,17 +29,21 @@ public class EX02 {
 	void avgMaxSpeed (Car[] arr) {
 		int sum = 0;
 		for (int i = 0 ; i < arr.length; i++) {
-			Hyundai h = (Hyundai)arr[i];
-			sum += h.maxSpeed;
+			if ( arr[i] instanceof Hyundai) {
+				Hyundai h = (Hyundai)arr[i];
+				sum += h.maxSpeed;
+			}
 		}
 		System.out.println("평균 속도 : " + sum/arr.length);
 	}
 	int sumOil (Car[] arr) {
 		int sum = 0 ;
 		for( int i = 0 ; i < arr.length ; i++ ) {
-			Hyundai h = new Hyundai();
-			h = (Hyundai)arr[i];
-			sum += h.oil;
+			if ( arr[i] instanceof Hyundai ) {
+				Hyundai h = new Hyundai();
+				h = (Hyundai)arr[i];
+				sum += h.oil;
+			}
 		}
 		return sum;
 	}
