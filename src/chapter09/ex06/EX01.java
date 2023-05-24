@@ -37,24 +37,36 @@ class Strawberry {
 public class EX01 {
 	
 	void totalPrice(Object[] obj) {
-		String name;
-		int price = 0 ;
+		String name ;
+		int price ;
 		int count ;
 
 		name = ((Apple)obj[0]).name;
 		price = ((Apple)obj[0]).price;
 		count = ((Apple)obj[0]).count;
-		System.out.println(name +"의 총 가격 : " + (price * count));
+		
+		int[] sum = new int[3];
+		if (obj[0] instanceof Apple) {
+		sum[0] = ((Apple)obj[0]).price * ((Apple)obj[0]).count ;
+		}
+		if (obj[1] instanceof Banana) {
+		sum[1] = ((Banana)obj[1]).price * ((Banana)obj[1]).count ;
+		}
+		if (obj[2] instanceof Strawberry) {
+		sum[2] = ((Strawberry)obj[2]).price * ((Strawberry)obj[2]).count ;
+		}
+		
+		System.out.println(name +"의 총 가격 : " + sum[0]);
 		
 		name = ((Banana)obj[1]).name;
 		price = ((Banana)obj[1]).price;
 		count = ((Banana)obj[1]).count;
-		System.out.println(name +"의 총 가격 : " + (price * count));
+		System.out.println(name +"의 총 가격 : " + sum[1]);
 		
 		name = ((Strawberry)obj[2]).name;
 		price = ((Strawberry)obj[2]).price;
 		count = ((Strawberry)obj[2]).count;
-		System.out.println(name +"의 총 가격 : " + (price * count));
+		System.out.println(name +"의 총 가격 : " + sum[2]);
 	}
 	
 	public static void main(String[] args) {
