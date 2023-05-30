@@ -20,13 +20,15 @@ public class Single_Generic {
 		 * 제네릭 클래스 : 다양한 타입을 지정 할 수 있는 클래스
 		 * 클래스 이름 뒤  <T> 에 들어이는 타입을 지정.
 		 *  <T>에 들어오는 타입
-		 *  - String<==> String
-		 *  - int	<==> Integer
-		 *  - long	<==> Long
-		 *  - short <==> Short
-		 *  - float <==> Float
-		 *  - double<==> Double
-		 *  - void	<==> Void
+		 *  - String	<==> String
+		 *  - int		<==> Integer
+		 *  - long		<==> Long
+		 *  - short 	<==> Short
+		 *  - float 	<==> Float
+		 *  - double	<==> Double
+		 *  - void		<==> Void
+		 *  - boolean	<==> Boolean
+		 *  - char  	<==> Character
 		 */
 		
 		// apple 객체 생성
