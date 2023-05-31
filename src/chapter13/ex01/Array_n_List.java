@@ -36,9 +36,16 @@ public class Array_n_List {
 		// 2. 컬랙션 List<E>
 		List<String> aList = new ArrayList<String> ();
 		
-		System.out.println(aList.size());
-		aList.add("A"); aList.add("B"); aList.add("B");
-		System.out.println(aList.size());
+		System.out.println(aList.toString());			// List 출력
+		System.out.println(aList.size());				// List 크기 출력
+		aList.add("A"); aList.add("B"); aList.add("B");	// List 추가
 		System.out.println(aList.toString());
+		System.out.println(aList.size());
+		aList.remove("B");								// List 삭제
+		System.out.println(aList.toString());
+		System.out.println(aList.size());
+		aList.remove("B");
+		System.out.println(aList.toString());
+		System.out.println(aList.size());
 	}
 }
