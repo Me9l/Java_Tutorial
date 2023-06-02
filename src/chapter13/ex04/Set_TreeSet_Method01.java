@@ -5,7 +5,7 @@ import java.util.TreeSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Set_TreeSet_Method {
+public class Set_TreeSet_Method01 {
 	public static void main(String[] args) {
 		/*
 		 * Set<E> : Interface, 객체화 불가능.

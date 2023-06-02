@@ -1,22 +1,23 @@
 package chapter13.ex04;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
 class Student {
 	int stuId;
-	String stuName, StuPhone;
+	String stuName, stuPhone;
 	
 	public Student(int stuId, String stuName, String stuPhone) {
 		this.stuId = stuId;
 		this.stuName = stuName;
-		StuPhone = stuPhone;
+		this.stuPhone = stuPhone;
 	}
 
 	@Override
 	public String toString() {
-		return "[stuId=" + stuId + ", stuName=" + stuName + ", StuPhone=" + StuPhone + "]";
+		return "[stuId=" + stuId + ", stuName=" + stuName + ", stuPhone=" + stuPhone + "]";
 	}
 	
 	@Override
@@ -63,8 +64,19 @@ public class EX02 {
 		hSet.add(s7);
 		
 		// 객체 출력
+		
+//		Enhanced For loop
 		for (Student student : hSet) {
 			System.out.println(student);			
 		}
+		
+//		Iterator
+		Iterator<Student> ir = hSet.iterator();
+		while (ir.hasNext()) {
+			Student st = ir.next();
+			System.out.println(st);
+//			System.out.println(ir.next().stuId);
+		}
+		
 	}
 }
